@@ -25,7 +25,7 @@ export default {
             {
                 slug: "originals",
                 title: "Originais da Netflix",
-                itens: await basicFetch(`discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+                itens: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: "trending",
@@ -35,7 +35,7 @@ export default {
             {
                 slug: "toprated",
                 title: "Em alta",
-                itens: await basicFetch(`/move/top_rated?language=pt-BR&api_key=${API_KEY}`)
+                itens: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: "action",
