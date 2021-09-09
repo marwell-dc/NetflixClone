@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css'
-import Tmdb from './Tmdb';
-import MovieRow from './components/movieRow/index'
+import HomePage from './components/homePage/index.js';
 
 /*
-cromograma para criação da pagina.
+Cromograma para criação da pagina.
 
   Header
   Destaque
@@ -14,26 +13,8 @@ cromograma para criação da pagina.
 
 
 const App = () => {
-
-  const [movieList, setMovieList ] = useState([]);
-
-  useEffect(() => {
-    const loadAll = async () => {
-      //Pegando a lista total
-      let list = await Tmdb.getHomeList();
-      setMovieList(list)
-    }
-    loadAll();
-  }, []);
-
   return (
-    <div className='page'>
-      <section className='lists'>
-        {movieList.map((item, key) => (
-            <MovieRow key={key} title={item.title} items={item.items} />
-        ))}
-      </section>
-    </div>
+    <HomePage />
   )
 }
 
