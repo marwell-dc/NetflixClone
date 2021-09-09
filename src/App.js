@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import './App.css'
 import Tmdb from './Tmdb';
+import MovieRow from './components/movieRow/index'
 
 /*
 cromograma para criação da pagina.
@@ -11,7 +13,7 @@ cromograma para criação da pagina.
 */
 
 
-export default () => {
+const App = () => {
 
   const [movieList, setMovieList ] = useState([]);
 
@@ -28,11 +30,11 @@ export default () => {
     <div className='page'>
       <section className='lists'>
         {movieList.map((item, key) => (
-            <div>
-                {item.title}
-            </div>
+            <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
     </div>
   )
 }
+
+export default App;
