@@ -74,11 +74,11 @@ export default {
         if (typeId) {
             switch(type) {
                 case 'movie':
-                        info = await basicFetch(`/movie/${typeId}?language=pr-BR&api_ket=${API_KEY}`);
+                        info = await basicFetch(`/movie/${typeId}?language=pt-BR&api_ket=${API_KEY}`);
                 break;
 
                 case 'tv':
-                    info = await basicFetch(`/tv/${typeId}?language=pr-BR&api_key=${API_KEY}`);
+                    info = await basicFetch(`/tv/${typeId}?language=pt-BR&api_key=${API_KEY}`);
                 break;
 
                 default:
