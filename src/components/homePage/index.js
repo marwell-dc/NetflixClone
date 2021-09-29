@@ -4,6 +4,7 @@ import Tmdb from '../../Tmdb.js';
 import MovieRow from '../movieRow/index.js'
 import FeatureMovie from '../featureMovie/index.js'
 import Header from '../Header';
+import Footer from '../Footer';
 
 const HomePage = () => {
   const [ movieList, setMovieList ] = useState([]);
@@ -53,6 +54,7 @@ const HomePage = () => {
             <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <Footer />
     </div>
   )
 }
