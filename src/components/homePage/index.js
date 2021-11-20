@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css'
-import Tmdb from '../../Tmdb.js';
+
 import MovieRow from '../movieRow/index.js'
+import Tmdb from '../../sevice/Tmdb';
 import FeatureMovie from '../featureMovie/index.js'
 import Header from '../Header';
 import Footer from '../Footer';
